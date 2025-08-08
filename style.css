@@ -1,8 +1,7 @@
 .hero {
   background-image: url('https://Just-n-NPC.github.io/Void-Archive/backgrounds/poiuytrew.png');
   background-size: cover;
-  background-position: center;
+  background-position: top center; /* focus on top part */
   background-repeat: no-repeat;
-  background-attachment: fixed;
   min-height: 100vh;
 }
