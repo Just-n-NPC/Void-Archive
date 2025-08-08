@@ -1,6 +1,7 @@
-
+body {
+  background-color: green !important;
+}
 .hero {
-  background-color: green;
   background-image: url('/backgrounds/poiuytrew.png');
   background-size: cover;
   background-position: center;
