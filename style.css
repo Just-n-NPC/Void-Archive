@@ -46,11 +46,11 @@ body {
 
 @media (max-width: 768px) {
   .angelic-war {
-    font-size: 3.5rem;
+    font-size: 3.5rem !important;
   }
 
   .fontasia {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 }
 
