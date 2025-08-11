@@ -37,7 +37,7 @@ body {
 }
 
 .big-letter {
-    font-size: 14rem; /* Twice 7rem */
+    font-size: 14rem !important;
     color: #e0b3ff;
     text-shadow: 0 0 15px #000;
 }
