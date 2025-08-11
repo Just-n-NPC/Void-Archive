@@ -19,3 +19,26 @@ body {
   from, to { border-color: transparent; }
   50% { border-color: #d6b3ff; }
 }
+@font-face {
+    font-family: 'Angelic War';
+    src: url('fonts/AngelicWar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Angelic War', sans-serif;
+}
+@font-face {
+  font-family: 'Fontasia';
+  src: url('fonts/fontasia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hero-subtitle {
+  font-family: 'Fontasia', serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #d4b5ff;
+  text-shadow: 0 0 5px #a084ff;
+  margin-top: 0.5em;
