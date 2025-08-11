@@ -13,22 +13,6 @@
     font-weight: normal;
     font-style: normal;
 }
-body {
-    font-family: Arial, sans-serif;
-}
-body {
-    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* Mobile override */
-@media (max-width: 768px) {
-  body {
-    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile2.png");
-  }
-}
 
 @font-face {
     font-family: 'Angelic War';
@@ -39,17 +23,24 @@ body {
 
 body {
     font-family: 'Angelic War', sans-serif;
+    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    color: #e0d5f5;
 }
-@font-face {
-  font-family: 'Fontasia';
-  src: url('fonts/fontasia.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
+@media (max-width: 768px) {
+    body {
+        background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile2.png");
+    }
 }
 
 .hero-subtitle {
-  font-family: 'Fontasia', serif;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  color: #d4b5ff;
-  text-shadow: 0 0 5px #a084ff;
-  margin-top: 0.5em;
+    font-family: 'Fontasia', serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #d4b5ff;
+    text-shadow: 0 0 5px #a084ff;
+    margin-top: 0.5em;
+}
