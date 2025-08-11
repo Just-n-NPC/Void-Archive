@@ -36,12 +36,6 @@ body {
     font-weight: normal !important;
 }
 
-.big-letter {
-    font-size: 10rem !important;
-    color: #e0b3ff;
-    text-shadow: 0 0 15px #000;
-}
-
 .fontasia {
     font-family: 'Fontasia', serif;
     font-size: 2rem !important;
