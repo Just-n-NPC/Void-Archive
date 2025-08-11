@@ -30,10 +30,16 @@ body {
 
 .angelic-war {
     font-family: 'Angelic War', sans-serif;
-    font-size: 7rem !important;
+    font-size: 7rem;
     color: #e0b3ff;
     text-shadow: 0 0 10px #000;
     font-weight: normal !important;
+}
+
+.big-letter {
+    font-size: 14rem; /* Twice 7rem */
+    color: #e0b3ff;
+    text-shadow: 0 0 15px #000;
 }
 
 .fontasia {
