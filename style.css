@@ -17,7 +17,7 @@ body {
     font-family: Arial, sans-serif;
 }
 body {
-    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground.png");
+    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -26,7 +26,7 @@ body {
 /* Mobile override */
 @media (max-width: 768px) {
   body {
-    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile.png");
+    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile2.png");
   }
 }
 
