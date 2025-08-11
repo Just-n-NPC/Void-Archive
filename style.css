@@ -4,3 +4,18 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.tagline {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  color: #d6b3ff; /* Light purple to match your dark theme */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #d6b3ff; /* Cursor effect */
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Blinking caret */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #d6b3ff; }
+}
