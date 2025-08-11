@@ -15,19 +15,23 @@
 }
 
 body {
-    font-family:font-family: sans-serif;
-    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    color: #e0d5f5;
+  background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;  /* Show full image without cropping */
+  margin: 0;
+  color: #e0d5f5;
 }
 
 @media (max-width: 768px) {
-    body {
-        background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile2.png");
-    }
+  body {
+    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile2.png");
+    background-attachment: fixed;  /* keep fixed */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;      /* show whole image */
+  }
 }
 
 .angelic-war {
