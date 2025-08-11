@@ -79,12 +79,6 @@
 }
     </style>
 </head>
-<body>
-    
-    <main>
-        <p>Explore the stories, admire the artwork, and connect for commissions.</p>
-    </main>
-</body>
 </html>
 <!DOCTYPE html>
 <html lang="en">
@@ -269,6 +263,40 @@
     <div class="hero-content">
       <h1>Welcome to the Void</h1>
       <p>Navigate through the vast creations born from deep within the mind of An'tiri.</p>
+        <h2 class="tagline"></h2>
+
+<script>
+const taglineText = "Explore the stories, admire the artwork, and connect for commissions";
+const taglineElement = document.querySelector(".tagline");
+
+let index = 0;
+let deleting = false;
+
+function typeEffect() {
+    if (!deleting && index <= taglineText.length) {
+        taglineElement.textContent = taglineText.slice(0, index++);
+    } 
+    else if (deleting && index >= 0) {
+        taglineElement.textContent = taglineText.slice(0, index--);
+    }
+
+    if (index === taglineText.length) {
+        deleting = true;
+        setTimeout(typeEffect, 1000); // pause before deleting
+        return;
+    }
+
+    if (index === 0 && deleting) {
+        deleting = false;
+        setTimeout(typeEffect, 500); // pause before retyping
+        return;
+    }
+
+    setTimeout(typeEffect, deleting ? 50 : 100); // speed control
+}
+
+typeEffect();
+</script>
     </div>
   </section>
 
