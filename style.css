@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'VoidFont';
+    src: url('fonts/VoidFont.woff2') format('woff2'),
+         url('fonts/VoidFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fontasia';
+    src: url('fonts/Fontasia.woff2') format('woff2'),
+         url('fonts/Fontasia.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: Arial, sans-serif;
+}
 body {
     background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground.png");
     background-size: cover;
