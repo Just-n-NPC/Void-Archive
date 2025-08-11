@@ -61,12 +61,12 @@ body {
   }
 
   .fontasia {
-   .fontasia {
-    font-size: 3rem !important;
+    font-size: 1.5rem !important; /* Reduced for mobile */
     max-width: 95vw;
     padding: 0 1.5rem;
   }
 }
+
 
 .hero-subtitle {
     font-family: 'Fontasia', serif;
