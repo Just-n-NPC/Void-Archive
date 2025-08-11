@@ -15,6 +15,7 @@
 }
 
 body {
+  font-family: sans-serif;
   background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
