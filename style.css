@@ -21,6 +21,21 @@
     font-style: normal;
 }
 
+.angelic-war {
+  font-family: 'Angelic War', sans-serif;
+  font-size: 3rem;
+  color: #e0b3ff;
+  text-shadow: 0 0 10px #000;
+}
+
+.fontasia {
+  font-family: 'Fontasia', serif;
+  font-size: 1.2rem;
+  color: #d4b5ff;
+  text-shadow: 0 0 5px #a084ff;
+  margin-top: 0.5em;
+}
+
 body {
     font-family: 'Angelic War', sans-serif;
     background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
