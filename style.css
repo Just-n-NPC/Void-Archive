@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Fontasia';
-    src: url('fonts/fontasia2.ttf') format('truetype');
+    src: url('fonts/Fontasia.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -8,23 +8,8 @@
 @font-face {
     font-family: 'Angelic War';
     src: url('fonts/AngelicWar.ttf') format('truetype');
-    font-weight: normal !important;
+    font-weight: normal;
     font-style: normal;
-}
-
-.angelic-war {
-  font-family: 'Angelic War', sans-serif;
-  font-size: 3rem;
-  color: #e0b3ff;
-  text-shadow: 0 0 10px #000;
-}
-
-.fontasia {
-  font-family: 'Fontasia', serif;
-  font-size: 1.2rem;
-  color: #d4b5ff;
-  text-shadow: 0 0 5px #a084ff;
-  margin-top: 0.5em;
 }
 
 body {
@@ -41,6 +26,22 @@ body {
     body {
         background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile2.png");
     }
+}
+
+.angelic-war {
+    font-family: 'Angelic War', sans-serif;
+    font-size: 3rem;
+    color: #e0b3ff;
+    text-shadow: 0 0 10px #000;
+    font-weight: normal !important;
+}
+
+.fontasia {
+    font-family: 'Fontasia', serif;
+    font-size: 1.2rem;
+    color: #d4b5ff;
+    text-shadow: 0 0 5px #a084ff;
+    margin-top: 0.5em;
 }
 
 .hero-subtitle {
