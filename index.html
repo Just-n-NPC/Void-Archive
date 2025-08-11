@@ -1,90 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css?v=2">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Void Archive</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0e0e0e;
-            color: #e0d5f5;
-        }
-        header {
-            background-color: #1e1a2e;
-            padding: 1em;
-            text-align: center;
-        }
-        nav a {
-            color: #cbb4f2;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 2em;
-            text-align: center;
-        }
-        @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    margin-top: 1rem;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .nav-links a {
-    margin: 0;
-    flex: 1 1 100%;
-    padding: 0.5rem;
-    background-color: #2a2a2a;
-    text-align: center;
-    border-radius: 8px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .section {
-    padding: 2rem 1rem;
-  }
-
-  .cards {
-    grid-template-columns: 1fr; /* one card per row */
-  }
-
-  .card img {
-    height: 150px;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 1rem;
-  }
-}
-    </style>
-</head>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Void Archive</title>
+  <link rel="stylesheet" href="style.css?v=2" />
+
   <style>
+    /* Basic reset */
     * {
       margin: 0;
       padding: 0;
@@ -92,9 +15,13 @@
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #f0e6ff;
+      font-family: 'Angelic War', sans-serif, Arial, sans-serif;
+      background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #e0d5f5;
+      margin: 0;
     }
 
     /* Navbar */
@@ -127,9 +54,56 @@
       color: #c084fc;
     }
 
-    /* Hero Section */
+    /* Hamburger icon - hidden on desktop */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    .hamburger img {
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 150px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(128, 0, 128, 0.5);
+        padding: 10px 0;
+        z-index: 200;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        margin: 0.5rem 0;
+        padding: 0.5rem 1rem;
+        color: #cbb4f2;
+      }
+
+      .nav-links a:hover {
+        background-color: #2a2a2a;
+        color: #e0b3ff;
+      }
+    }
+
+    /* Hero section */
     .hero {
-      background: url('https://images.unsplash.com/photo-1595433562696-a1a3f9e0b84f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -137,43 +111,46 @@
       align-items: center;
       text-align: center;
       position: relative;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
+      padding: 0 1rem;
       color: #f0e6ff;
-      padding: 2rem;
-    }
-
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #e0b3ff;
       text-shadow: 0 0 10px #000;
     }
 
-    .hero-content p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-      text-shadow: 0 0 5px #000;
+    .hero-content h1.angelic-war {
+      font-family: 'Angelic War', sans-serif;
+      font-size: 7rem;
+      color: #e0b3ff;
+      text-shadow: 0 0 10px #000;
+      font-weight: normal !important;
     }
 
-    /* Featured Sections */
+    .hero-content p.fontasia {
+      font-family: 'Fontasia', serif;
+      font-size: 2rem;
+      color: #d4b5ff;
+      text-shadow: 0 0 5px #a084ff;
+      margin-top: 0.5em;
+    }
+
+    /* Responsive font sizes for hero */
+    @media (max-width: 768px) {
+      .hero-content h1.angelic-war {
+        font-size: 3.5rem !important;
+      }
+
+      .hero-content p.fontasia {
+        font-size: 1.2rem !important;
+      }
+    }
+
+    /* Sections and cards styles */
     .section {
       padding: 4rem 2rem;
       background-color: #1a1a1a;
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(128, 0, 128, 0.4);
     }
 
     .section h2 {
@@ -187,8 +164,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
     }
 
     .card {
@@ -235,6 +210,7 @@
       text-decoration: underline;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem;
@@ -248,36 +224,36 @@
 
   <!-- Navigation -->
   <div class="navbar">
-  <h1>Void Archive</h1>
-  <div id="hamburger" class="hamburger">
-    <img src="https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/art/hamburger.png" alt="Menu">
+    <h1>Void Archive</h1>
+    <div id="hamburger" class="hamburger">
+      <img src="https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/art/hamburger.png" alt="Menu" />
+    </div>
+    <div id="nav-links" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="chapters.html">Stories</a>
+      <a href="illustrations.html">Art</a>
+      <a href="commissions.html">Commissions</a>
+    </div>
   </div>
-  <div id="nav-links" class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="chapters.html">Stories</a>
-    <a href="illustrations.html">Art</a>
-    <a href="commissions.html">Commissions</a>
-  </div>
-</div>
 
   <!-- Hero Section -->
   <section class="hero">
-  <div class="hero-content">
-    <h1 class="angelic-war">Welcome to the Void</h1>
-    <p class="fontasia">Navigate through the vast creations born from deep within the mind of An'tiri.</p>
-  </div>
-</section>
+    <div class="hero-content">
+      <h1 class="angelic-war">Welcome to the Void</h1>
+      <p class="fontasia">Navigate through the vast creations born from deep within the mind of An'tiri.</p>
+    </div>
+  </section>
 
-  <!-- Stories -->
+  <!-- Stories Section -->
   <section class="section">
     <h2>Featured Stories</h2>
     <div class="cards">
       <div class="card">
         <picture>
-    <source srcset="art/tjk.png" media="(max-width: 768px)">
-    <source srcset="art/Untitled-1.png" media="(min-width: 769px)">
-    <img src="art/Untitled-1.png" alt="A Whole New World">
-  </picture>
+          <source srcset="art/tjk.png" media="(max-width: 768px)">
+          <source srcset="art/Untitled-1.png" media="(min-width: 769px)">
+          <img src="art/Untitled-1.png" alt="A Whole New World" />
+        </picture>
         <div class="card-content">
           <h3>A Whole New World</h3>
           <p>Follow Rhaegah as he unravels the secrets of himself, and the world.</p>
@@ -287,16 +263,16 @@
     </div>
   </section>
 
-  <!-- Art -->
+  <!-- Art Section -->
   <section class="section">
     <h2>Illustrations</h2>
     <div class="cards">
       <div class="card">
         <picture>
-    <source srcset="art/ojojtj1.png" media="(max-width: 768px)">
-    <source srcset="art/Ud-1.png" media="(min-width: 769px)">
-    <img src="art/Ud-1.png" alt="A Whole New World">
-  </picture>
+          <source srcset="art/ojojtj1.png" media="(max-width: 768px)">
+          <source srcset="art/Ud-1.png" media="(min-width: 769px)">
+          <img src="art/Ud-1.png" alt="Analects of the Void" />
+        </picture>
         <div class="card-content">
           <h3>Analects of the Void</h3>
           <p>Custom illustration, concept art, and character designs from the mind of Antiri.</p>
@@ -306,16 +282,16 @@
     </div>
   </section>
 
-  <!-- Commissions -->
+  <!-- Commissions Section -->
   <section class="section">
     <h2>Commissions</h2>
     <div class="cards">
       <div class="card">
         <picture>
-    <source srcset="art/waecr.png" media="(max-width: 768px)">
-    <source srcset="art/itled-1.png" media="(min-width: 769px)">
-    <img src="art/itled-1.png" alt="A Whole New World">
-  </picture>
+          <source srcset="art/waecr.png" media="(max-width: 768px)">
+          <source srcset="art/itled-1.png" media="(min-width: 769px)">
+          <img src="art/itled-1.png" alt="Request Custom Art" />
+        </picture>
         <div class="card-content">
           <h3>Request Custom Art</h3>
           <p>View rates and info for custom illustrations or animated pieces.</p>
@@ -329,7 +305,7 @@
     &copy; 2025 Antiri. All Rights Reserved. Built with fire, lightning, and Noir.
   </footer>
 
-    <script>
+  <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
 
