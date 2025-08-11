@@ -23,6 +23,13 @@ body {
     background-attachment: fixed;
 }
 
+/* Mobile override */
+@media (max-width: 768px) {
+  body {
+    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile.png");
+  }
+}
+
 @font-face {
     font-family: 'Angelic War';
     src: url('fonts/AngelicWar.ttf') format('truetype');
