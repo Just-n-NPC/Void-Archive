@@ -248,14 +248,17 @@
 
   <!-- Navigation -->
   <div class="navbar">
-    <h1>Void Archive</h1>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="chapters.html">Stories</a>
-      <a href="illustrations.html">Art</a>
-      <a href="commissions.html">Commissions</a>
-    </div>
+  <h1>Void Archive</h1>
+  <div class="hamburger" id="hamburger">
+    <img src="https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/art/hamburger.png" alt="Menu" />
   </div>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="chapters.html">Stories</a>
+    <a href="illustrations.html">Art</a>
+    <a href="commissions.html">Commissions</a>
+  </div>
+</div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -325,6 +328,15 @@
   <footer>
     &copy; 2025 Antiri. All Rights Reserved. Built with fire, lightning, and Noir.
   </footer>
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
