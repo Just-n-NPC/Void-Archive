@@ -39,11 +39,15 @@ body {
 }
 
 .fontasia {
-    font-family: 'Fontasia', serif;
-    font-size: 3rem !important;
-    color: #d4b5ff;
-    text-shadow: 0 0 5px #a084ff;
-    margin-top: 0.5em;
+  font-family: 'Fontasia', serif;
+  font-size: 3rem !important;
+  color: #d4b5ff;
+  text-shadow: 0 0 5px #a084ff;
+  margin-top: 0.5em;
+  max-width: 90vw;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 0 1rem;
 }
 
 @media (max-width: 768px) {
@@ -52,7 +56,10 @@ body {
   }
 
   .fontasia {
+   .fontasia {
     font-size: 3rem !important;
+    max-width: 95vw;
+    padding: 0 1.5rem;
   }
 }
 
