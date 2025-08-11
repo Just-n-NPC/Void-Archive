@@ -1,365 +1,130 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css?v=2">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Void Archive</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0e0e0e;
-            color: #e0d5f5;
-        }
-        header {
-            background-color: #1e1a2e;
-            padding: 1em;
-            text-align: center;
-        }
-        nav a {
-            color: #cbb4f2;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 2em;
-            text-align: center;
-        }
-        @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    margin-top: 1rem;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .nav-links a {
-    margin: 0;
-    flex: 1 1 100%;
-    padding: 0.5rem;
-    background-color: #2a2a2a;
-    text-align: center;
-    border-radius: 8px;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-    padding: 0 1rem;
-  }
-
-  .section {
-    padding: 2rem 1rem;
-  }
-
-  .cards {
-    grid-template-columns: 1fr; /* one card per row */
-  }
-
-  .card img {
-    height: 150px;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 1rem;
-  }
-}
-    </style>
-</head>
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Void Archive</title>
+  <!-- Google Font or backup -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;900&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    /* Embed Angelic War font for main title */
+    @font-face {
+      font-family: 'Angelic War';
+      src: url('fonts/AngelicWar.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* Embed Fontasia font for subtitle tagline */
+    @font-face {
+      font-family: 'Fontasia';
+      src: url('fonts/fontasia.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
+      margin: 0;
+      padding: 0;
+      background: url('https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground.png') no-repeat center center fixed;
+      background-size: cover;
       color: #f0e6ff;
+      font-family: sans-serif;
     }
 
-    /* Navbar */
-    .navbar {
-      background-color: #1a1a1a;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(128, 0, 128, 0.3);
-    }
-
-    .navbar h1 {
-      font-size: 1.5rem;
-      color: #c084fc;
-    }
-
-    .nav-links a {
-      margin-left: 1rem;
-      text-decoration: none;
-      color: #eee;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #c084fc;
-    }
-
-    /* Hero Section */
     .hero {
-      background: url('https://images.unsplash.com/photo-1595433562696-a1a3f9e0b84f?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      position: relative;
+      padding: 0 20px;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      z-index: 1;
+    /* Main hero title using Angelic War font and glow animation */
+    .hero-title {
+      font-family: 'Angelic War', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      color: #cba6f7;
+      text-shadow:
+        0 0 10px #a020f0,
+        0 0 20px #8b00ff,
+        0 0 30px #8000ff;
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeInZoom 1.5s ease forwards 0.5s;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: #f0e6ff;
-      padding: 2rem;
+    @keyframes fadeInZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
-    .hero-content h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #e0b3ff;
-      text-shadow: 0 0 10px #000;
-    }
-
-    .hero-content p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-      text-shadow: 0 0 5px #000;
-    }
-
-    /* Featured Sections */
-    .section {
-      padding: 4rem 2rem;
-      background-color: #1a1a1a;
-    }
-
-    .section h2 {
-      text-align: center;
-      font-size: 2rem;
+    /* Animated tagline using Fontasia + typewriter effect */
+    .hero-subtitle {
+      font-family: 'Fontasia', serif;
+      font-size: clamp(1rem, 3vw, 2rem);
       color: #d4b5ff;
-      margin-bottom: 2rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .card {
-      background-color: #2c2c2c;
-      border-radius: 12px;
+      text-shadow: 0 0 5px #a084ff;
+      white-space: nowrap;
       overflow: hidden;
-      box-shadow: 0 0 15px rgba(128, 0, 128, 0.4);
-      transition: transform 0.3s ease;
+      border-right: 2px solid #d4b5ff;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    /* Blink caret animation */
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #d4b5ff; }
+    }
+    .hero-subtitle {
+      animation: blink 0.75s step-end infinite;
     }
 
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 1rem;
-    }
-
-    .card-content h3 {
-      margin-bottom: 0.5rem;
-      color: #c084fc;
-    }
-
-    .card-content p {
-      font-size: 0.95rem;
-      color: #ccc;
-    }
-
-    .card-content a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      color: #c084fc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .card-content a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #111;
-      color: #777;
-      font-size: 0.9rem;
+    /* Adjust for mobile responsiveness */
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Navigation -->
-  <div class="navbar">
-    <h1>Void Archive</h1>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="chapters.html">Stories</a>
-      <a href="illustrations.html">Art</a>
-      <a href="commissions.html">Commissions</a>
-    </div>
-  </div>
-
-  <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to the Void</h1>
-      <p>Navigate through the vast creations born from deep within the mind of An'tiri.</p>
-        <h2 class="tagline"></h2>
+    <h1 class="hero-title">Welcome to the Void</h1>
+    <p id="subtitle" class="hero-subtitle"></p>
+  </section>
 
-<script>
-const taglineText = "Explore the stories, admire the artwork, and connect for commissions";
-const taglineElement = document.querySelector(".tagline");
+  <script>
+    const text = "Explore the stories, admire the artwork, and connect for commissions";
+    const el = document.getElementById('subtitle');
+    let index = 0, deleting = false;
 
-let index = 0;
-let deleting = false;
+    function typeEffect() {
+      if (!deleting && index <= text.length) {
+        el.textContent = text.slice(0, index++);
+      } else if (deleting && index >= 0) {
+        el.textContent = text.slice(0, index--);
+      }
 
-function typeEffect() {
-    if (!deleting && index <= taglineText.length) {
-        taglineElement.textContent = taglineText.slice(0, index++);
-    } 
-    else if (deleting && index >= 0) {
-        taglineElement.textContent = taglineText.slice(0, index--);
-    }
-
-    if (index === taglineText.length) {
+      if (index === text.length) {
         deleting = true;
-        setTimeout(typeEffect, 1000); // pause before deleting
+        setTimeout(typeEffect, 1000);
         return;
-    }
-
-    if (index === 0 && deleting) {
+      }
+      if (index === 0 && deleting) {
         deleting = false;
-        setTimeout(typeEffect, 500); // pause before retyping
+        setTimeout(typeEffect, 500);
         return;
+      }
+
+      setTimeout(typeEffect, deleting ? 50 : 100);
     }
-
-    setTimeout(typeEffect, deleting ? 50 : 100); // speed control
-}
-
-typeEffect();
-</script>
-    </div>
-  </section>
-
-  <!-- Stories -->
-  <section class="section">
-    <h2>Featured Stories</h2>
-    <div class="cards">
-      <div class="card">
-        <picture>
-    <source srcset="art/tjk.png" media="(max-width: 768px)">
-    <source srcset="art/Untitled-1.png" media="(min-width: 769px)">
-    <img src="art/Untitled-1.png" alt="A Whole New World">
-  </picture>
-        <div class="card-content">
-          <h3>A Whole New World</h3>
-          <p>Follow Rhaegah as he unravels the secrets of himself, and the world.</p>
-          <a href="chapters.html">Read More →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Art -->
-  <section class="section">
-    <h2>Illustrations</h2>
-    <div class="cards">
-      <div class="card">
-        <picture>
-    <source srcset="art/ojojtj1.png" media="(max-width: 768px)">
-    <source srcset="art/Ud-1.png" media="(min-width: 769px)">
-    <img src="art/Ud-1.png" alt="A Whole New World">
-  </picture>
-        <div class="card-content">
-          <h3>Analects of the Void</h3>
-          <p>Custom illustration, concept art, and character designs from the mind of Antiri.</p>
-          <a href="illustrations.html">View Gallery →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Commissions -->
-  <section class="section">
-    <h2>Commissions</h2>
-    <div class="cards">
-      <div class="card">
-        <picture>
-    <source srcset="art/waecr.png" media="(max-width: 768px)">
-    <source srcset="art/itled-1.png" media="(min-width: 769px)">
-    <img src="art/itled-1.png" alt="A Whole New World">
-  </picture>
-        <div class="card-content">
-          <h3>Request Custom Art</h3>
-          <p>View rates and info for custom illustrations or animated pieces.</p>
-          <a href="commissions.html">See Details →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Antiri. All Rights Reserved. Built with fire, lightning, and Noir.
-  </footer>
-
+    typeEffect();
+  </script>
 </body>
 </html>
