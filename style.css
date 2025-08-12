@@ -1,99 +1,42 @@
-/* ===== Fonts ===== */
+/* Import Fonts */
 @font-face {
-  font-family: 'Fontasia';
-  src: url('Fontasia.otf') format('opentype');
+    font-family: 'AngelicWar';
+    src: url('fonts/AngelicWar.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'AngelicWar';
-  src: url('AngelicWar.otf') format('opentype');
+    font-family: 'Fontasia';
+    src: url('fonts/Fontasia.ttf') format('truetype');
 }
 
-/* ===== Global Styles ===== */
+/* General Page Styling */
 body {
-  margin: 0;
-  padding: 0;
-  background: url('your-background.jpg') center center no-repeat fixed;
-  background-size: contain; /* Shows entire image 1:1 */
-  font-family: Arial, sans-serif; /* Default font for all text */
-  color: #cbb4f2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fontasia', sans-serif;
+    color: white;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: contain; /* Show full image */
+    background-attachment: fixed;
 }
 
-/* ===== Header ===== */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.logo {
-  font-family: 'Fontasia', Arial, sans-serif;
-  font-size: 3rem !important; /* PC default */
-  color: #e0b3ff;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #cbb4f2;
-  font-family: 'AngelicWar', Arial, sans-serif;
-}
-
-.nav-links a:hover {
-  color: #e0b3ff;
-}
-
-/* ===== Mobile Nav ===== */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: #cbb4f2;
-  margin: 4px;
-  transition: 0.3s;
-}
-
-/* ===== Mobile Styles ===== */
+/* Prevent background movement on mobile */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #1a1a1a;
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    width: 150px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(128, 0, 128, 0.5);
-    padding: 10px 0;
-    z-index: 200;
-  }
+    body {
+        background-attachment: scroll;
+    }
+}
 
-  .nav-links.active {
-    display: flex;
-  }
+/* Welcome to the Void Styling */
+.welcome-text {
+    font-family: 'AngelicWar', cursive;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Shadow for readability */
+}
 
-  .nav-links a {
-    margin: 0.5rem 0;
-    padding: 0.5rem 1rem;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .logo {
-    font-size: 1.5rem !important; /* Scaled down for mobile */
-  }
+/* Additional text styles */
+h1, h2, h3, p {
+    font-family: 'Fontasia', sans-serif;
 }
