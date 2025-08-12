@@ -1,108 +1,71 @@
+/* ===== Fonts ===== */
 @font-face {
   font-family: 'Fontasia';
-  src: url('fonts/Fontasia.woff2') format('woff2'),
-       url('fonts/Fontasia.woff') format('woff'),
-       url('fonts/fontasia2.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  src: url('Fontasia.otf') format('opentype');
 }
 
 @font-face {
-    font-family: 'Angelic War';
-    src: url('fonts/AngelicWar.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'AngelicWar';
+  src: url('AngelicWar.otf') format('opentype');
 }
 
+/* ===== Global Styles ===== */
 body {
-  font-family: sans-serif;
-  background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackground2.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: contain;  /* Show full image without cropping */
   margin: 0;
-  color: #e0d5f5;
+  padding: 0;
+  background: url('your-background.jpg') center center no-repeat fixed;
+  background-size: contain; /* Shows entire image 1:1 */
+  font-family: Arial, sans-serif; /* Default font for all text */
+  color: #cbb4f2;
 }
 
-@media (max-width: 768px) {
-  body {
-    background-image: url("https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/backgrounds/sitebackgroundmobile2.png");
-    background-attachment: fixed;  /* keep fixed */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;      /* show whole image */
-  }
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.angelic-war {
-    font-family: 'Angelic War', sans-serif;
-    font-size: 8rem !important;
-    color: #e0b3ff;
-    text-shadow: 0 0 10px #000;
-    font-weight: normal !important;
+.logo {
+  font-family: 'Fontasia', Arial, sans-serif;
+  font-size: 3rem !important; /* PC default */
+  color: #e0b3ff;
 }
 
-.fontasia {
-  font-family: 'Fontasia', serif;
-  font-size: 3rem !important;
-  color: #d4b5ff;
-  text-shadow: 0 0 5px #a084ff;
-  margin-top: 0.5em;
-  max-width: 90vw;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  padding: 0 1rem;
-}
-
-@media (max-width: 768px) {
-  .angelic-war {
-    font-size: 4.5rem !important;
-  }
-
-  .fontasia {
-    font-size: 1.5rem !important; /* Reduced for mobile */
-    max-width: 95vw;
-    padding: 0 1.5rem;
-  }
-}
-
-
-.hero-subtitle {
-    font-family: 'Fontasia', serif;
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: #d4b5ff;
-    text-shadow: 0 0 5px #a084ff;
-    margin-top: 0.5em;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-  color: #eee;
-}
-
-.hamburger img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  display: block;
+.nav-links {
+  display: flex;
+  gap: 1rem;
 }
 
 .nav-links a {
-  margin-left: 1rem;
   text-decoration: none;
-  color: #eee;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  color: #cbb4f2;
+  font-family: 'AngelicWar', Arial, sans-serif;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
+.nav-links a:hover {
+  color: #e0b3ff;
+}
 
+/* ===== Mobile Nav ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #cbb4f2;
+  margin: 4px;
+  transition: 0.3s;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -124,11 +87,13 @@ body {
   .nav-links a {
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
-    color: #cbb4f2;
   }
 
-  .nav-links a:hover {
-    background-color: #2a2a2a;
-    color: #e0b3ff;
+  .hamburger {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 1.5rem !important; /* Scaled down for mobile */
   }
 }
