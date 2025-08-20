@@ -44,3 +44,45 @@ h1, h2, h3 {
 p {
     font-family: Fontasia;
 }
+/* Art Page Layout */
+.art-page {
+  padding: 2rem;
+  color: #eee;
+}
+
+.art-section {
+  margin-bottom: 3rem;
+}
+
+.art-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b38aff; /* purple glow */
+  text-shadow: 0 0 10px rgba(179, 138, 255, 0.7);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(179, 138, 255, 0.8);
+}
+
+.note {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+  color: #aaa;
+}
