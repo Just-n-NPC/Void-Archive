@@ -175,3 +175,81 @@ p {
   margin-top: 0.5rem;
   color: #aaa;
 }
+
+.chapters-page {
+  background: #1a1410; /* parchment-dark */
+  color: #f4e6d3;
+  font-family: 'AngelicWar', serif;
+}
+
+.chapter-card {
+  background: rgba(50, 40, 30, 0.8);
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(255, 200, 120, 0.2);
+}
+
+.chapter-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.chapter-card .subtitle {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #d9bfa4;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #ffcc88;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.chapter-text {
+  max-width: 800px;
+  margin: 2rem auto;
+  line-height: 1.8;
+}
+
+.back-link {
+  display: block;
+  max-width: 800px;
+  margin: 2rem auto;
+  color: #ffcc88;
+  text-decoration: none;
+}
+
+.chapter-text section {
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(30, 20, 15, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 200, 120, 0.15);
+}
+
+.chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.chapter-nav a {
+  padding: 0.5rem 1rem;
+  background: #2a1f16;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #ffcc88;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.chapter-nav a:hover {
+  background: #3a2b20;
+}
