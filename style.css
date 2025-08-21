@@ -253,3 +253,41 @@ p {
 .chapter-nav a:hover {
   background: #3a2b20;
 }
+
+/* ============================= */
+/* Art Page Styling              */
+/* ============================= */
+.art-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.art-card {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.art-card img {
+  width: 100%;
+  display: block;
+}
+
+.art-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 255, 200, 0.25);
+}
+
+.art-card h3 {
+  margin: 0;
+  padding: 1rem;
+  font-family: 'AngelicWar', sans-serif;
+  text-align: center;
+  color: #eee;
+  background: rgba(0, 0, 0, 0.7);
+}
