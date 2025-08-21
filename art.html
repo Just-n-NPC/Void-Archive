@@ -163,39 +163,63 @@
   </main>
 
   <script>
-    const totalPages = 26;
-    let currentPage = 1;
+  const totalPages = 26;
+  let currentPage = 1;
 
-    function updatePage() {
-      const comicImg = document.getElementById("comic-page");
-      const counter = document.getElementById("page-counter");
-      comicImg.src = `https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/images/${currentPage}.png`;
-      comicImg.alt = `Comic Page ${currentPage}`;
-      counter.textContent = `Page ${currentPage} of ${totalPages}`;
+  const comicImg = document.getElementById("comic-page");
+  const counter = document.getElementById("page-counter");
+  const flipbook = document.querySelector(".flipbook");
+
+  function updatePage() {
+    comicImg.src = `https://raw.githubusercontent.com/Just-n-NPC/Void-Archive/refs/heads/main/images/${currentPage}.png`;
+    comicImg.alt = `Comic Page ${currentPage}`;
+    counter.textContent = `Page ${currentPage} of ${totalPages}`;
+  }
+
+  function nextPage() {
+    if (currentPage < totalPages) {
+      currentPage++;
+      updatePage();
     }
+  }
 
-    function nextPage() {
-      if (currentPage < totalPages) {
-        currentPage++;
-        updatePage();
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      updatePage();
+    }
+  }
+
+  // Fullscreen on first page click
+  comicImg.addEventListener("click", () => {
+    if (currentPage === 1) {
+      if (flipbook.requestFullscreen) {
+        flipbook.requestFullscreen();
+      } else if (flipbook.webkitRequestFullscreen) {
+        flipbook.webkitRequestFullscreen();
+      } else if (flipbook.msRequestFullscreen) {
+        flipbook.msRequestFullscreen();
       }
     }
+  });
 
-    function prevPage() {
-      if (currentPage > 1) {
-        currentPage--;
-        updatePage();
-      }
+  // Keyboard navigation
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+      nextPage();
+    } else if (event.key === "ArrowLeft") {
+      prevPage();
     }
+  });
 
-    // Keyboard navigation (Arrow keys)
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "ArrowRight") {
-        nextPage();
-      } else if (event.key === "ArrowLeft") {
-        prevPage();
-      }
-    });
-  </script>
+  // Reset to first page when exiting fullscreen
+  document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) {
+      currentPage = 1;
+      updatePage();
+    }
+  });
+</script>
+
 </body>
 </html>
