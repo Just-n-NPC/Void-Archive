@@ -20,6 +20,95 @@ body {
     background-attachment: fixed;
 }
 
+body {
+  background: #0a0a0f; /* void black */
+  color: #eee;
+  font-family: 'AngelicWar', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'AngelicWar', sans-serif;
+}
+
+/* ---------------------------
+   CHAPTERS PAGE
+   (bookish parchment + glow)
+---------------------------- */
+body.chapters-page {
+  background: linear-gradient(#2b2520, #1a1612); /* old paper brown */
+  color: #f4e4c1; /* parchment text */
+}
+
+body.chapters-page h1,
+body.chapters-page h2 {
+  text-shadow: 0 0 6px rgba(255, 215, 128, 0.6);
+}
+
+body.chapters-page .chapter-card {
+  background: rgba(50, 40, 30, 0.9);
+  border: 1px solid #a67c52;
+  box-shadow: 0 0 12px rgba(255, 200, 100, 0.4);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem auto;
+  max-width: 800px;
+}
+
+/* ---------------------------
+   ART PAGE
+   (gallery spotlight feel)
+---------------------------- */
+body.art-page {
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  color: #ddd;
+}
+
+body.art-page h1,
+body.art-page h2 {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+body.art-page .art-gallery img {
+  border: 2px solid #333;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.art-page .art-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+/* ---------------------------
+   COMMISSIONS PAGE
+   (clean + formal)
+---------------------------- */
+body.commissions-page {
+  background: #0f0f13;
+  color: #eaeaea;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body.commissions-page h1,
+body.commissions-page h2 {
+  font-family: 'AngelicWar', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+body.commissions-page .commission-box {
+  background: #1a1a20;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 700px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
 /* Mobile-specific background */
 @media (max-width: 768px) {
     body {
